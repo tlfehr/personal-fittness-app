@@ -1,0 +1,16 @@
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  root: ".",
+  publicDir: "public",
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+  },
+  server: {
+    open: true,
+    headers: {
+      "Cache-Control": "public, max-age=0",
+    },
+  },
+});
