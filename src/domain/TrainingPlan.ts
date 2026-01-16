@@ -1,30 +1,60 @@
 /**
  * Vordefinierte Trainingspläne A und B
- * In späteren Versionen: von Backend laden oder via UI erstellen
+ * Mit echten Übungen und aktuellen Gewichten
  */
 
 import { TrainingPlan } from "./types";
 
 export const TRAINING_PLAN_A: TrainingPlan = {
   id: "A",
-  name: "Push Day",
+  name: "Plan A",
   exercises: [
     {
-      id: "bench_press",
-      name: "Bench Press",
+      id: "leg_press",
+      name: "Beinpresse",
       targetSets: 4,
       restSeconds: 120,
     },
     {
-      id: "incline_press",
-      name: "Incline Press",
+      id: "chest_press",
+      name: "Brustpresse",
+      targetSets: 4,
+      restSeconds: 120,
+    },
+    {
+      id: "lat_pulldown",
+      name: "Latzug",
       targetSets: 3,
       restSeconds: 90,
     },
     {
-      id: "tricep_dips",
-      name: "Tricep Dips",
+      id: "leg_curl",
+      name: "Beinbeuger",
+      targetSets: 2,
+      restSeconds: 90,
+    },
+    {
+      id: "shoulder_press",
+      name: "Schulterpresse",
       targetSets: 3,
+      restSeconds: 90,
+    },
+    {
+      id: "butterfly",
+      name: "Butterfly",
+      targetSets: 3,
+      restSeconds: 90,
+    },
+    {
+      id: "tricep_machine",
+      name: "Trizeps",
+      targetSets: 2,
+      restSeconds: 60,
+    },
+    {
+      id: "ab_machine",
+      name: "Bauchmaschine",
+      targetSets: 2,
       restSeconds: 60,
     },
   ],
@@ -33,25 +63,55 @@ export const TRAINING_PLAN_A: TrainingPlan = {
 
 export const TRAINING_PLAN_B: TrainingPlan = {
   id: "B",
-  name: "Leg Day",
+  name: "Plan B",
   exercises: [
     {
-      id: "squats",
-      name: "Squats",
-      targetSets: 4,
-      restSeconds: 180,
-    },
-    {
-      id: "deadlifts",
-      name: "Deadlifts",
-      targetSets: 3,
-      restSeconds: 180,
-    },
-    {
-      id: "leg_press",
-      name: "Leg Press",
+      id: "leg_curl_b",
+      name: "Beinbeuger",
       targetSets: 3,
       restSeconds: 90,
+    },
+    {
+      id: "leg_extension",
+      name: "Beinstrecker",
+      targetSets: 3,
+      restSeconds: 90,
+    },
+    {
+      id: "rowing_machine",
+      name: "Rudermaschine",
+      targetSets: 3,
+      restSeconds: 120,
+    },
+    {
+      id: "chest_press_b",
+      name: "Brustpresse",
+      targetSets: 3,
+      restSeconds: 120,
+    },
+    {
+      id: "shoulder_press_b",
+      name: "Schulterpresse",
+      targetSets: 3,
+      restSeconds: 90,
+    },
+    {
+      id: "reverse_butterfly",
+      name: "Reverse Butterfly",
+      targetSets: 3,
+      restSeconds: 90,
+    },
+    {
+      id: "bicep_machine",
+      name: "Bizepsmaschine",
+      targetSets: 3,
+      restSeconds: 60,
+    },
+    {
+      id: "ab_machine_b",
+      name: "Bauchmaschine",
+      targetSets: 3,
+      restSeconds: 60,
     },
   ],
   createdAt: Date.now(),
