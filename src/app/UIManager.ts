@@ -102,17 +102,9 @@ export class AppUI {
           ${this.renderTodayStatus()}
         </div>
 
-        <div class="debug-section" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ccc; font-size: 0.8rem;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <button id="btn-test-data" class="btn" style="background: #4CAF50; color: white;">
-              ✅ Test-Daten (30d)
-            </button>
-            <button id="btn-clear-test" class="btn" style="background: #FF9800; color: white;">
-              🧹 Test löschen
-            </button>
-          </div>
+        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ccc;">
           <button id="btn-reset" class="btn btn-danger" style="width: 100%;">
-            🗑️ Alle Daten löschen (DEBUG)
+            🗑️ Alle Daten löschen
           </button>
         </div>
       </div>
@@ -133,26 +125,6 @@ export class AppUI {
     document
       .getElementById("btn-calendar")
       ?.addEventListener("click", () => this.navigate("history"));
-
-    document
-      .getElementById("btn-test-data")
-      ?.addEventListener("click", async () => {
-        const { writeTestDataToStorage, printTestDataSummary } = await import(
-          "../domain/generateTestData"
-        );
-        writeTestDataToStorage();
-        printTestDataSummary();
-        // Reload AppState mit neuen Daten
-        location.reload();
-      });
-
-    document
-      .getElementById("btn-clear-test")
-      ?.addEventListener("click", async () => {
-        const { clearTestData } = await import("../domain/generateTestData");
-        clearTestData();
-        location.reload();
-      });
 
     document
       .getElementById("btn-reset")
